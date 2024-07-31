@@ -5,14 +5,14 @@ const { name, topic, message, img } = Astro.props;
 <div class="flex flex-col">
   <div class="relative">
     <div
-      class="absolute z-10 flex items-center justify-center opacity-0 hover:opacity-100 w-full h-full p-5"
+      class="absolute z-10 flex items-center justify-center opacity-0 hover:opacity-100 w-full h-full p-5 bg-gradient-to-br from-pink-500 to-[#f7bd03]"
     >
       <p>{message}</p>
     </div>
-    <img src={img} class="bg-[#f20044] w-full h-[252px]" />
+    <img src={img} class="bg-slate-300 w-full h-[252px]" />
   </div>
   <div class="py-3 px-5">
-    <div class="z-0 font-bold text-lg text-center">{name}</div>
+    <div class="z-0 font-bold text-lg text-center">จาก {name}</div>
     <div class="z-0 font-thin text-xs flex-auto text-center">
       {topic}
     </div>
