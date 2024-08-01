@@ -3,68 +3,67 @@ import Layout from "../layouts/Layout.astro";
 import Cards from "../components/cards.astro";
 
 const mockWord = [
-    {
-        name:"รักนะ1", 
-        topic:"โสด", 
-        message:"ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย",
-        img:""
-    },
-    {
-        name:"รักนะ2", 
-        topic:"โสด", 
-        message:"ขอตังหน่อย",
-        img:""
-    },
-    {
-        name:"รักนะ3", 
-        topic:"โสด", 
-        message:"ขอตังหน่อย",
-        img:""
-    },
-    {
-        name:"รักนะ1", 
-        topic:"โสด", 
-        message:"ขอตังหน่อย",
-        img:""
-    },
-    {
-        name:"รักนะ2", 
-        topic:"โสด", 
-        message:"ขอตังหน่อย",
-        img:""
-    },
-    {
-        name:"รักนะ3", 
-        topic:"โสด", 
-        message:"ขอตังหน่อย",
-        img:""
-    },
-    {
-        name:"รักนะ1", 
-        topic:"โสด", 
-        message:"ขอตังหน่อย",
-        img:""
-    },
-    {
-        name:"รักนะ2", 
-        topic:"โสด", 
-        message:"ขอตังหน่อย",
-        img:""
-    },
-    {
-        name:"รักนะ3", 
-        topic:"โสด", 
-        message:"ขอตังหน่อย",
-        img:""
-    }
-    ];
+  {
+    name: "รักนะ1",
+    topic: "โสด",
+    message:
+      "ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย",
+    img: "",
+  },
+  {
+    name: "รักนะ2",
+    topic: "โสด",
+    message: "ขอตังหน่อย",
+    img: "",
+  },
+  {
+    name: "รักนะ3",
+    topic: "โสด",
+    message: "ขอตังหน่อย",
+    img: "",
+  },
+  {
+    name: "รักนะ1",
+    topic: "โสด",
+    message: "ขอตังหน่อย",
+    img: "",
+  },
+  {
+    name: "รักนะ2",
+    topic: "โสด",
+    message: "ขอตังหน่อย",
+    img: "",
+  },
+  {
+    name: "รักนะ3",
+    topic: "โสด",
+    message: "ขอตังหน่อย",
+    img: "",
+  },
+  {
+    name: "รักนะ1",
+    topic: "โสด",
+    message: "ขอตังหน่อย",
+    img: "",
+  },
+  {
+    name: "รักนะ2",
+    topic: "โสด",
+    message: "ขอตังหน่อย",
+    img: "",
+  },
+  {
+    name: "รักนะ3",
+    topic: "โสด",
+    message: "ขอตังหน่อย",
+    img: "",
+  },
+];
 ---
 
 <Layout title="Welcome to Astro.">
   <div class="flex flex-row">
-    <div class="basis-2/5 bg-slate-400">
-        ใส่รูปพื้นหลัง Recap CBA ทั้งหมด
-    </div>
+    <div class="basis-2/5 bg-slate-400">ใส่รูปพื้นหลัง Recap CBA ทั้งหมด</div>
 
     <div class="basis-4/5 p-12">
       <div class="flex flex-row gap-11">
@@ -79,18 +78,26 @@ const mockWord = [
         </div>
         <div class="flex flex-col gap-6 flex-auto">
           <div>
-            <p class="font-extrabold text-6xl text-right bg-gradient-to-r from-pink-500 to-[#f7bd03]">YEARBOOK</p>
-            <p class="font-extrabold text-6xl text-right">2024</p>
+            <div
+              class="font-extrabold text-6xl text-right bg-gradient-to-r from-pink-500 to-[#f7bd03]"
+            >
+              <p>YEARBOOK</p>
+              <p>2024</p>
+            </div>
             <div class="max-w-[633px]">
               <p class="font-thin text-xs py-7 break-words">
-                CBA is ...
-                fafnwafmaweofmpfepowmfopewfpoakmfopwemfowefpoawkfopwamfopwfopewkasdfsafafafwafwfawfewfawfewfewafwafawmfklmlwfafwefwenfwfmewlkfan
-                kmengawomwaijmpawfofpap fwakf wfok wafow m
-                poafafnwafmaweofmpfepowmfopewfpoakmfopwemfowefpoawkfopwamfopwfopewkasdfsafafafwafwfawfewfawfewfewafwafawmfklmlwfafwefwenfwfmewlkfan
+                CBA is a journey where people get along ... where people's
+                laughter resonates from the bottom of their heart ... where
+                people get opportunities to embrace their weeknesses and dare to
+                challenge them ... No matter what you will define it. CBA could
+                not be what we perceive if along the journey we did not have
+                each other ... Remember CBA is just a place, but because of you
+                all we create stories ...
               </p>
               <p class="font-thin text-xs break-words">
-                Furthermore, it contains memory
-                fafnwafmaweofmpfepowmfopewfpoakmfopwemfowefpoawkfopwamfopwfopewkasdfsafafafwafwfawfewfawfewfewafwafawmfklmlwfafwefwenfwfmewlkfanfafnwafmaweofmpfepowmfopewfpoakmfopwemfowefpoawkfopwamfopwfopewkasdfsafafafwafwfawfewfawfewfewafwafawmfklmlwfafwefwenfwfmewlkfan
+                Roses are red, Violets are blue, CBA wouldn't be what it is now,
+                if I gotta sail on the journey without thou (Shakespeare
+                ไม่ได้กล่าว)
               </p>
             </div>
           </div>
@@ -105,7 +112,9 @@ const mockWord = [
             หวังว่าการเดินทางของเพื่อน ๆ กับไอส้มครั้งนี้จะได้อะไรไม่มากก็น้อย
             ลองคิดดูนะว่าเรามาถึงจุดนี้ได้ยังไง
             ถึงอาจจะมีอุปสรรคหรือไม่สมหวังในบางเรื่อง
-            ส้มเชื่อว่าทุกคนต้องได้อะไรกลับไปไม่มากก็น้อยคับ การเดินทางต่อจากนี้ไปขอให้เชื่อมั่นในความฝันของตัวเองนะคับ ขอให้โชคดี..."
+            ส้มเชื่อว่าทุกคนต้องได้อะไรกลับไปไม่มากก็น้อยคับ
+            การเดินทางต่อจากนี้ไปขอให้เชื่อมั่นในความฝันของตัวเองนะคับ
+            ขอให้โชคดี..."
           </p>
           <p class="text-xs text-slate-700 px-6">
             ด้วยรักและความหวังดีจาก ไอส้ม (หมาชิบะที่เป็นไอโกลเด้นให้เทอไม่ได้)
@@ -114,24 +123,35 @@ const mockWord = [
       </div>
 
       <div class="pt-11">
-        <!--ตรงนี้ใส่ cards layouts-->
+        <p class="font-bold text-lg py-2">สารจากเพื่อน ๆ CBA</p>
         <div class="grid grid-cols-3 gap-11 overflow-scroll h-[450px]">
-            {
-                mockWord.map((each)=>(
-                    <Cards
-                    name={each.name}
-                    topic={each.topic}
-                    img={each.img}
-                    message={each.message}/>
-                ))
-            }
+          {
+            mockWord.map((each) => (
+              <Cards
+                name={each.name}
+                topic={each.topic}
+                img={each.img}
+                message={each.message}
+              />
+            ))
+          }
         </div>
         <div class="flex justify-center">
-        <div class="animate-bounce bg-white dark:bg-slate-800 p-2 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full">
-            <svg class="w-6 h-6 text-violet-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+          <div
+            class="animate-bounce bg-white dark:bg-slate-800 p-2 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full"
+          >
+            <svg
+              class="w-6 h-6 text-violet-500"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
               <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
             </svg>
-        </div>
+          </div>
         </div>
       </div>
     </div>
