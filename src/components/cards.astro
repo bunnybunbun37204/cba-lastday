@@ -1,5 +1,5 @@
 ---
-const { name, topic, message, img } = Astro.props;
+const { employee_id, name, topic, message,} = Astro.props;
 ---
 
 <div class="flex flex-col">
@@ -7,9 +7,9 @@ const { name, topic, message, img } = Astro.props;
     <div
       class="absolute z-10 flex items-center justify-center opacity-0 hover:opacity-100 w-full h-full p-5 bg-gradient-to-br from-pink-500 to-[#f7bd03]"
     >
-      <p>{message}</p>
+      <p class="overflow-scroll">{message}</p>
     </div>
-    <img src={img} class="bg-slate-300 w-full h-[252px]" />
+    <img  src={`/public/img/${employee_id}.png`} class="bg-slate-300 w-[260px] h-[252px] object-cover" />
   </div>
   <div class="py-3 px-5">
     <div class="z-0 font-bold text-lg text-center">จาก {name}</div>
