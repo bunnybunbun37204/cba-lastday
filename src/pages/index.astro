@@ -1,6 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Cards from "../components/cards.astro";
+import InfoCards from "../components/InfoCards.astro";
+
+const getSessionInfo = [
+  {
+  employee_id: "CE112",
+  name:"น้องมะขาม",
+  motto:"เงินมางานเดิน เงินเกินงานเนี้ยบ"
+  }
+]
 
 const mockWord = [
   {
@@ -9,6 +18,7 @@ const mockWord = [
     topic: "โสด",
     message:
       "ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย",
+    recipient: ""
   },
   {
     employee_id: "CE111",
@@ -77,15 +87,24 @@ const mockWord = [
 
     <div class="basis-4/5 p-12">
       <div class="flex flex-row gap-11">
-        <div class="flex flex-col w-[283px]">
-          <img class="bg-[#f20044] h-[252px]" />
+        <!-- <div class="flex flex-col w-[283px]">
+          <img class="bg-[#f20044] h-[252px]"/>
           <div class="py-3 px-5">
             <div class="font-bold text-lg text-center bg-gradient-to-r from-pink-500 to-[#f7bd03] text-transparent bg-clip-text">ชื่อคน</div>
             <div class="font-thin text-xs flex-auto text-center">
               "คำขวัญประจำใจ"
             </div>
           </div>
-        </div>
+        </div> -->
+        {
+          getSessionInfo.map((each) => (
+            <InfoCards
+              employee_id={each.employee_id}
+              name={each.name}
+              motto={each.motto}
+            />
+          ))
+        }
         <div class="flex flex-col gap-6 flex-auto">
           <div>
             <img class="" src="/img/YEARBOOK 2024.png"/>
