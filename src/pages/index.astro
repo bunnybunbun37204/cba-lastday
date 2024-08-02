@@ -1,9 +1,177 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Cards from "../components/cards.astro";
+import InfoCards from "../components/InfoCards.astro";
 
-const mockWord = ['รักนะ', 'โสด', 'ขอตังหน่อย'];
+// FROM EMPLOYEE DETAIL
+const getSessionInfo = [
+  {
+    employee_id: "CE112",
+    name: "น้องมะขาม",
+    position: "CE",
+  },
+];
+//  FROM LoveAlarmMessage
+const mockWord = [
+  {
+    employee_id: "CE111",
+    name: "รักนะ1",
+    topic: "โสด",
+    message:
+      "น้องเฟี้ยตนักรัก ขอบคุณมากจริงๆสำหรับทุกอย่าง มึงช่วยกุมากๆตั้งแต่เรื่องจัดของ แก้ปัญหา คุยปัญหากับสายกุ ทุกอย่างจริงๆอ่ะ555555 ที่ผ่านมาเค้าได้อะไรจาก SCM เยอะจริงๆ เฟี้ยตทำหน้าที่เป็น supporter ในฝ่ายเราได้ดีมากจริงๆนะ ภูมิใจในตัวมึง เก่งมากก เค้าขอโทษนะที่บางครั้งอาจไม่ได้ช่วยมึงมาก เป็นเพราะตัวกุเอง แต่เป็นเพราะทุกคนเลยผ่านมาได้ด้วยดีจริงๆ ขอบคุณที่ทำให้เค้าได้เรียนรู้อะไรหลายๆ อย่างจากมึงนะ รักมึงนะ เจอกันตอนเปิดเทอม สู้ๆกับโลจิส อิ้อิ้ เจอกันทักด้วย รอเปิดร้านกาแฟนายเฟี้ยตนะ",
+    recipient: "",
+  },
+  {
+    employee_id: "CE111",
+    name: "รักนะ1",
+    topic: "โสด",
+    message:
+      "ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย",
+  },
+  {
+    employee_id: "CE111",
+    name: "รักนะ1",
+    topic: "โสด",
+    message:
+      "ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย",
+  },
+  {
+    employee_id: "CE111",
+    name: "รักนะ1",
+    topic: "โสด",
+    message:
+      "ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย",
+  },
+  {
+    employee_id: "CE111",
+    name: "รักนะ1",
+    topic: "โสด",
+    message:
+      "ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย",
+  },
+  {
+    employee_id: "CE111",
+    name: "รักนะ1",
+    topic: "โสด",
+    message:
+      "ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย",
+  },
+  {
+    employee_id: "CE111",
+    name: "รักนะ1",
+    topic: "โสด",
+    message:
+      "ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย",
+  },
+  {
+    employee_id: "CE111",
+    name: "รักนะ1",
+    topic: "โสด",
+    message:
+      "ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย",
+  },
+  {
+    employee_id: "CE111",
+    name: "รักนะ1",
+    topic: "โสด",
+    message:
+      "ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย",
+  },
+];
 ---
 
 <Layout title="Welcome to Astro.">
-    <h1 class="text-6xl">jjjjj</h1>
+  <div class="flex flex-row h-lvh">
+    <div class="hidden md:inline basis-2/5 bg-white">
+      <img src="/img/Background.png" class="object-cover" />
+    </div>
+
+    <div class="basis-4/5 md:p-12">
+      <div class="flex flex-col-reverse md:flex-row gap-0 md:gap-11 items-center">
+        {
+          getSessionInfo.map((each) => (
+            <InfoCards
+              employee_id={each.employee_id}
+              name={each.name}
+              position={each.position}
+            />
+          ))
+        }
+        <div class="flex flex-col gap-6 flex-auto items-center my-10 md:my-0">
+          <div class='items-center"'>
+            <div class="w-full place-content-end">
+              <img class="" src="/img/YEARBOOK 2024.png" />
+            </div>
+            <div class="max-w-[633px]">
+              <p class="font-thin text-lg md:text-xs py-5 break-words">
+                CBA is a journey where people come together, where laughter
+                resonates from the bottom of their hearts, and where individuals
+                are given the opportunity to embrace their weaknesses and dare
+                to challenge them. No matter how you define it, CBA would not be
+                what we perceive it to be without each other along the journey.
+                Remember, CBA is just a place, but because of all of you, we
+                create precious stories.
+              </p>
+              <p
+                class="font-extrabold text-lg md:text-xs break-words bg-gradient-to-r from-pink-500 to-[#f7bd03] text-transparent bg-clip-text"
+              >
+                Roses are red, violets are blue, CBA wouldn't be what it is now,
+                if I had to sail this journey without you. (Shakespeare
+                ไม่ได้กล่าว)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="md:hidden flex place-content-center m-10">
+        <img src="/img/Background.png" class="object-cover" />
+      </div>
+
+      <div class="md:pt-8">
+        <div class="flex flex-col gap-2">
+          <p class="pb-8 md:pb-0 font-bold text-4xl md:text-base md:text-black text-center md:text-left bg-gradient-to-r from-pink-500 to-[#f7bd03] text-transparent bg-clip-text">สารจากไอส้ม</p>
+          <div class="border bg-pink-100 p-4 rounded-lg mx-20">
+            <p
+              class="text-xl md:text-base px-6 bg-gradient-to-r from-pink-500 to-[#f7bd03] text-transparent bg-clip-text"
+            >
+              "ถึงเหล่า CBA ที่สู้ชีวิตทุกคนนน ขอขอบคุณสำหรับความพยายาม
+              หวังว่าการเดินทางของเพื่อน ๆ กับไอส้มครั้งนี้จะได้อะไรไม่มากก็น้อย
+              ลองคิดดูนะว่าเรามาถึงจุดนี้ได้ยังไง
+              ถึงอาจจะมีอุปสรรคหรือไม่สมหวังในบางเรื่อง
+              ส้มเชื่อว่าทุกคนต้องได้อะไรกลับไปไม่มากก็น้อยคับ
+              การเดินทางต่อจากนี้ไปขอให้เชื่อมั่นในความฝันของตัวเองนะคับ
+              ขอให้โชคดี..."
+            </p>
+            <p class="py-2 md:py-0 text-lg md:text-xs text-slate-700 px-6">
+              ด้วยรักและความหวังดีจาก ไอส้ม
+              (หมาชิบะที่เป็นไอโกลเด้นให้เทอไม่ได้)
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="h-min">
+        <p
+          class="font-bold text-4xl py-8 text-center bg-gradient-to-r from-pink-500 to-[#f7bd03] text-transparent bg-clip-text"
+        >
+          สารจากเพื่อน ๆ CBA
+        </p>
+        <div class="my-10 h-full">
+          <div class="flex overflow-x-scroll items-center h-max gap-7">
+            {
+              mockWord.map((each) => (
+                <Cards
+                  employee_id={each.employee_id}
+                  name={each.name}
+                  topic={each.topic}
+                  message={each.message}
+                />
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>

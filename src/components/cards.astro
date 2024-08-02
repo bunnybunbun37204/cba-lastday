@@ -1,0 +1,20 @@
+---
+const { employee_id, name, topic, message,} = Astro.props;
+---
+
+<div class="flex flex-none flex-col rounded-lg h-max">
+  <div class="relative rounded-lg">
+    <div
+      class="absolute z-10 flex items-center justify-center opacity-0 hover:opacity-100 w-full h-min p-5 bg-gradient-to-br from-pink-500 to-[#f7bd03] rounded-lg"
+    >
+      <p>{message}</p>
+    </div>
+    <img  src={`/img/${employee_id}.png`} class="bg-slate-300 w-[260px] h-[252px] object-cover" />
+  </div>
+  <div class="py-3 px-5">
+    <div class="z-0 font-bold text-lg text-center">จาก {name}</div>
+    <div class="z-0 font-thin text-xs flex-auto text-center">
+      {topic}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+---
+const { employee_id, name, position} = Astro.props;
+---
+
+<div class="flex flex-col w-[283px]">
+    <img class="h-[252px] object-cover" src={`/img/${employee_id}.png`}/>
+    <div class="py-3 px-5">
+      <div class="font-bold text-lg text-center bg-gradient-to-r from-pink-500 to-[#f7bd03] text-transparent bg-clip-text">{name}</div>
+      <div class="font-thin text-xs flex-auto text-center">
+        {position} คนเก่งงง
+      </div>
+    </div>
+  </div>
