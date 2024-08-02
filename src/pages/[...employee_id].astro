@@ -73,7 +73,7 @@ try {
         {
           getSessionInfo.map((each) => (
             <InfoCards
-              employee_id={employee_id}
+              employee_id={employee_id?.toUpperCase()}
               name={each.name}
               position={each.position}
             />
