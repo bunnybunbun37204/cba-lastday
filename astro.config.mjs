@@ -7,5 +7,6 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
   integrations: [tailwind()],
   output: "server",
+  base:"https://finalmemories.pages.dev",
   adapter: cloudflare()
 });
