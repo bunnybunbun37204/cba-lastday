@@ -18,7 +18,7 @@ const mockWord = [
     pseudonym: "รักนะ1",
     topic: "โสด",
     message:
-      "น้องเฟี้ยตนักรัก ขอบคุณมากจริงๆสำหรับทุกอย่าง มึงช่วยกุมากๆตั้งแต่เรื่องจัดของ แก้ปัญหา คุยปัญหากับสายกุ ทุกอย่างจริงๆอ่ะ555555 ที่ผ่านมาเค้าได้อะไรจาก SCM เยอะจริงๆ เฟี้ยตทำหน้าที่เป็น supporter ในฝ่ายเราได้ดีมากจริงๆนะ ภูมิใจในตัวมึง เก่งมากก เค้าขอโทษนะที่บางครั้งอาจไม่ได้ช่วยมึงมาก เป็นเพราะตัวกุเอง แต่เป็นเพราะทุกคนเลยผ่านมาได้ด้วยดีจริงๆ ขอบคุณที่ทำให้เค้าได้เรียนรู้อะไรหลายๆ อย่างจากมึงนะ รักมึงนะ เจอกันตอนเปิดเทอม สู้ๆกับโลจิส อิ้อิ้ เจอกันทักด้วย รอเปิดร้านกาแฟนายเฟี้ยตนะ",
+      "In a quiet village, Luna found an ancient, enchanted book. Each night, it whispered tales of forgotten worlds. One evening, the book showed her a hidden path in the nearby forest. Following its guidance, Luna discovered a magical glade where wishes came true. She wished for her ailing village to prosper. Instantly, the trees bore fruit, and the river sparkled with pure water. The village thrived, and Luna became a legend, the guardian of the enchanted book, ensuring its magic always served good.",
   },
   {
     employee_id: "CE111",
@@ -80,7 +80,7 @@ const mockWord = [
 ---
 
 <Layout title="Welcome to Astro.">
-  <div class="flex flex-row h-lvh">
+  <div class="flex flex-row h-lvh md:justify-center">
     <div class="hidden lg:inline basis-2/5 bg-white">
       <img src="/img/Background.png" class="object-cover" />
     </div>
@@ -127,7 +127,7 @@ const mockWord = [
         <img src="/img/Background.png" class="object-cover" />
       </div>
 
-      <div class="lg:pt-8">
+      <div class="lg:pt-4">
         <div class="flex flex-col gap-2">
           <p class="pb-8 lg:pb-0 font-bold text-4xl lg:text-base lg:text-black text-center lg:text-left bg-gradient-to-r from-pink-500 to-[#f7bd03] text-transparent bg-clip-text">สารจากไอส้ม</p>
           <div class="border bg-pink-100 p-4 rounded-lg mx-20">
@@ -152,12 +152,12 @@ const mockWord = [
 
       <div class="h-min">
         <p
-          class="font-bold text-4xl py-8 text-center bg-gradient-to-r from-pink-500 to-[#f7bd03] text-transparent bg-clip-text"
+          class="font-bold text-4xl py-4 text-center bg-gradient-to-r from-pink-500 to-[#f7bd03] text-transparent bg-clip-text"
         >
           สารจากเพื่อน ๆ CBA
         </p>
-        <div class="my-10 h-full">
-          <div class="flex overflow-x-scroll items-center h-max gap-7">
+        <div class="">
+          <div class="flex overflow-x-scroll items-center h-max gap-5">
             {
               mockWord.map((each) => (
                 <Cards
