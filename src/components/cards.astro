@@ -1,5 +1,5 @@
 ---
-const { employee_id, name, topic, message,} = Astro.props;
+const { employee_id, pseudonym, topic, message,} = Astro.props;
 ---
 
 <div class="flex flex-none flex-col rounded-lg h-max">
@@ -12,7 +12,7 @@ const { employee_id, name, topic, message,} = Astro.props;
     <img  src={`/img/${employee_id}.png`} class="bg-slate-300 w-[260px] h-[252px] object-cover" />
   </div>
   <div class="py-3 px-5">
-    <div class="z-0 font-bold text-lg text-center">จาก {name}</div>
+    <div class="z-0 font-bold text-lg text-center">จาก {pseudonym}</div>
     <div class="z-0 font-thin text-xs flex-auto text-center">
       {topic}
     </div>
