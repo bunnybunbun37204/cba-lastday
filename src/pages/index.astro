@@ -7,7 +7,7 @@ const getSessionInfo = [
   {
   employee_id: "CE112",
   name:"น้องมะขาม",
-  motto: "CE คนเก่ง"
+  position:"CE"
   }
 ]
 
@@ -101,7 +101,7 @@ const mockWord = [
             <InfoCards
               employee_id={each.employee_id}
               name={each.name}
-              motto={each.motto}
+              position={each.position}
             />
           ))
         }
@@ -130,7 +130,7 @@ const mockWord = [
       </div>
       <hr>
 
-      <div class="pt-11">
+      <div class="pt-8">
         <div class="flex flex-col gap-2">
           <p class="font-bold text-lg ">สารจากไอส้ม</p>
           <div class="border bg-pink-100 p-4 rounded-lg">
@@ -154,7 +154,7 @@ const mockWord = [
 
       <div>
         <p
-          class="font-bold text-4xl py-11 text-center bg-gradient-to-r from-pink-500 to-[#f7bd03] text-transparent bg-clip-text"
+          class="font-bold text-4xl py-8 text-center bg-gradient-to-r from-pink-500 to-[#f7bd03] text-transparent bg-clip-text"
         >
           สารจากเพื่อน ๆ CBA
         </p>
