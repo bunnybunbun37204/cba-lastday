@@ -5,35 +5,53 @@ import InfoCards from "../components/InfoCards.astro";
 
 const { employee_id } = Astro.params;
 
-// FROM EMPLOYEE DETAIL
-const getSessionInfo = [
-  {
-    employee_id: "CE112",
-    name: "น้องมะขาม",
-    position: "CE",
-  },
-];
-
-// Fetching data from the specified URL
-let mockWord = [];
+// Fetching session info from the specified URL
+let getSessionInfo = [];
 
 try {
-    const formData = new FormData();
+  // Create a FormData object and append the necessary data
+  const formData = new FormData();
   formData.append("employee_id", employee_id as string);
+
   const response = await fetch(
-    "https://erp.cbachula.com/is/love_alarm/get_love",
+    "https://erp.cbachula.com/is/love_alarm/get_nick_name",
     {
       method: "POST",
-      body: formData
+      body: formData,
     }
   );
 
   if (response.ok) {
     const data = await response.json();
-    console.log(data);
+    // Ensure data is an array and has the correct structure
+    getSessionInfo = Array.isArray(data) ? data : [];
+  } else {
+    console.error("Failed to fetch session info");
+  }
+} catch (error) {
+  console.error("Error fetching session info:", error);
+}
+
+// Fetching data from another URL
+let mockWord = [];
+
+try {
+  // Create a FormData object and append the necessary data
+  const formData = new FormData();
+  formData.append("employee_id", employee_id as string);
+
+  const response = await fetch(
+    "https://erp.cbachula.com/is/love_alarm/get_love",
+    {
+      method: "POST",
+      body: formData,
+    }
+  );
+
+  if (response.ok) {
+    const data = await response.json();
     // Ensure data is an array
     mockWord = Array.isArray(data) ? data : [];
-    console.log(mockWord);
   } else {
     console.error("Failed to fetch data");
   }
@@ -56,8 +74,8 @@ try {
         {
           getSessionInfo.map((each) => (
             <InfoCards
-              employee_id={each.employee_id}
-              name={each.name}
+              employee_id={employee_id}  // Assuming employee_id should be displayed
+              name={each.employee_nickname_thai}
               position={each.position}
             />
           ))
