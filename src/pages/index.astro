@@ -18,7 +18,7 @@ const mockWord = [
     name: "รักนะ1",
     topic: "โสด",
     message:
-      "ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย ขอตังหน่อย ขอหน่อย ขออออออออออออออออออหน่ออยยยยยยยยยยยยย",
+      "น้องเฟี้ยตนักรัก ขอบคุณมากจริงๆสำหรับทุกอย่าง มึงช่วยกุมากๆตั้งแต่เรื่องจัดของ แก้ปัญหา คุยปัญหากับสายกุ ทุกอย่างจริงๆอ่ะ555555 ที่ผ่านมาเค้าได้อะไรจาก SCM เยอะจริงๆ เฟี้ยตทำหน้าที่เป็น supporter ในฝ่ายเราได้ดีมากจริงๆนะ ภูมิใจในตัวมึง เก่งมากก เค้าขอโทษนะที่บางครั้งอาจไม่ได้ช่วยมึงมาก เป็นเพราะตัวกุเอง แต่เป็นเพราะทุกคนเลยผ่านมาได้ด้วยดีจริงๆ ขอบคุณที่ทำให้เค้าได้เรียนรู้อะไรหลายๆ อย่างจากมึงนะ รักมึงนะ เจอกันตอนเปิดเทอม สู้ๆกับโลจิส อิ้อิ้ เจอกันทักด้วย รอเปิดร้านกาแฟนายเฟี้ยตนะ",
     recipient: "",
   },
   {
@@ -151,14 +151,14 @@ const mockWord = [
         </div>
       </div>
 
-      <div>
+      <div class="h-min">
         <p
           class="font-bold text-4xl py-8 text-center bg-gradient-to-r from-pink-500 to-[#f7bd03] text-transparent bg-clip-text"
         >
           สารจากเพื่อน ๆ CBA
         </p>
-        <div class="overflow-auto my-10">
-          <div class="flex overflow-x-scroll items-center h-[300px] gap-7">
+        <div class="my-10 h-full">
+          <div class="flex overflow-x-scroll items-center h-max gap-7">
             {
               mockWord.map((each) => (
                 <Cards
@@ -171,23 +171,6 @@ const mockWord = [
             }
           </div>
         </div>
-        <!-- <div class="flex justify-center">
-          <button
-            class="animate-bounce bg-white dark:bg-slate-800 p-2 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full"
-          >
-            <svg
-              class="w-6 h-6 text-[#f2bd04]"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
-          </button>
-        </div> -->
       </div>
     </div>
   </div>

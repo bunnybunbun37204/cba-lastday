@@ -2,10 +2,10 @@
 const { employee_id, name, topic, message,} = Astro.props;
 ---
 
-<div class="flex flex-none flex-col rounded-lg">
+<div class="flex flex-none flex-col rounded-lg h-max">
   <div class="relative rounded-lg">
     <div
-      class="absolute z-10 flex items-center justify-center opacity-0 hover:opacity-100 w-full h-full p-5 bg-gradient-to-br from-pink-500 to-[#f7bd03] rounded-lg"
+      class="absolute z-10 flex items-center justify-center opacity-0 hover:opacity-100 w-full h-min p-5 bg-gradient-to-br from-pink-500 to-[#f7bd03] rounded-lg"
     >
       <p>{message}</p>
     </div>
